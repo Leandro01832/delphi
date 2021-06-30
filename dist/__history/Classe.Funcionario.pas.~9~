@@ -1,0 +1,37 @@
+unit Classe.Funcionario;
+
+interface
+
+uses Classe.PessoaDado, System.SysUtils;
+
+type
+  TFuncionario = class (TPessoaDado)
+  private
+    FFuncao: String;
+    FSalario: Currency;
+    procedure SetFuncao(const Value: String);
+    procedure SetSalario(const Value: Currency);
+
+  public
+  property Funcao : String read FFuncao write SetFuncao;
+  property Salario : Currency read FSalario write SetSalario;
+
+  end;
+
+implementation
+
+{ TFuncionario }
+
+procedure TFuncionario.SetFuncao(const Value: String);
+begin
+  FFuncao := Value;
+end;
+
+procedure TFuncionario.SetSalario(const Value: Currency);
+begin
+if Value <= 0 then  raise Exception.Create('O salario não pode ser menor ou igual a zero !!!');
+
+  FSalario := Value;
+end;
+
+end.

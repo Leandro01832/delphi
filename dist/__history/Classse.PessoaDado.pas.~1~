@@ -1,0 +1,16 @@
+unit Classse.PessoaDado;
+
+interface
+
+uses Classe.Pessoa;
+
+type
+TPessoaDado = class(TPessoa)
+
+
+
+end;
+
+implementation
+
+end.

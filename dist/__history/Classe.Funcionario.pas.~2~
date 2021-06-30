@@ -1,0 +1,33 @@
+unit Classe.Funcionario;
+
+interface
+
+type
+  TFuncionario = class
+  private
+    FFuncao: String;
+    FSalario: String;
+    procedure SetFuncao(const Value: String);
+    procedure SetSalario(const Value: String);
+
+  public
+  property Funcao : String read FFuncao write SetFuncao;
+  property Salario : String read FSalario write SetSalario;
+
+  end;
+
+implementation
+
+{ TFuncionario }
+
+procedure TFuncionario.SetFuncao(const Value: String);
+begin
+  FFuncao := Value;
+end;
+
+procedure TFuncionario.SetSalario(const Value: String);
+begin
+  FSalario := Value;
+end;
+
+end.

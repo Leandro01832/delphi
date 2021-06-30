@@ -1,0 +1,16 @@
+unit Classe.Vendedor;
+
+interface
+
+uses Classe.Funcionario;
+
+type
+  TVendedor = class(TFuncionario)
+
+
+
+  end;
+
+implementation
+
+end.
